@@ -15,7 +15,7 @@ const defaults = {
  *
  * @param {object} eleventyConfig
  * @param {object} options The default values for embedded Pens
- * @param {string} options.tabs	The Default comma-separated set of Pen pages to show (default="result")
+ * @param {string} options.tabs	The Default comma-separated string of the tabs of the codepen to display (default="result")
  * @param {number} options.height The default height of Pen iFrames (default=300)
  * @param {string} options.width The default width of Pen iFrames (default="100%")
  * @param {string} options.theme The default theme for all Pens (default="dark")

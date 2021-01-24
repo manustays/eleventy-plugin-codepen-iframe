@@ -32,11 +32,16 @@ module.exports = (eleventyConfig) => {
 ```
 
 ## Config Options
+These options set the default values for embedded Pens. They can be overridden while embedding individual Pens.
 
-| Option      | Type    | Default       | Description              |
-| ----------- | ------- | ------------- |--------------------------|
-| option name | type    | default value | What does this option do |
-
+| Option   | Type    | Default   | Description              |
+| -------- | ------- | --------- |--------------------------|
+| tabs     | string  | "result"  | Default comma-separated string of the tabs of the codepen to display |
+| height   | number  | 300       | Default height of Pen iFrames |
+| width    | string  | "100%"    | Default width of Pen iFrames |
+| theme    | string  | "dark"    | Default theme for all Pens |
+| user     | string  | ""        | CodePen user-id to use if only Pen-id is provided |
+| class    | string  | "codepen" | CSS classes to add to the iFrame |
 
 ## Credits
 
