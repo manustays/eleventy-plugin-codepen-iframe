@@ -17,11 +17,18 @@ npm install --save-dev @manustays/eleventy-plugin-codepen-iframe
 ### STEP 2: Include it in your `.eleventy.js` config file:
 
 ```js
-const EmbedCodePen = require("@manustays/eleventy-plugin-codepen-iframe");
+const embedCodePen = require("@manustays/eleventy-plugin-codepen-iframe");
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addPlugin(EmbedCodePen);
+  eleventyConfig.addPlugin(embedCodePen);
 };
+```
+
+
+### STEP 3 – Use it in your templates:
+
+```njk
+{% EmbedCodePen "pen-url" %}
 ```
 
 ## Config Options
@@ -33,5 +40,5 @@ module.exports = (eleventyConfig) => {
 
 ## Credits
 
-Huge shoutout to the [awesome 11ty community](https://twitter.com/eleven_ty) for inspirations and learning and to [CodePen.io](https://codepen.io/) for makign this plugin possible!
+Huge shout-out to the [awesome 11ty community](https://twitter.com/eleven_ty) for inspirations and learning and to [CodePen.io](https://codepen.io/) for makign this plugin possible!
 

@@ -1,7 +1,7 @@
 {
-  "name": "@scope/plugin-name",
+  "name": "@manustays/eleventy-plugin-codepen-iframe",
   "version": "1.0.0",
-  "description": "Description of plugin",
+  "description": "Embed CodePen.io Pens into your 11ty website using a ShortCode. It directly embeds an iFrame for efficiency (without loading CodePen's Javascript).",
   "homepage": "",
   "main": ".eleventy.js",
   "scripts": {
@@ -11,21 +11,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/username/repo-name.git"
+    "url": "git+https://github.com/manustays/eleventy-plugin-codepen-iframe.git"
   },
   "keywords": [
     "11ty",
     "11ty-plugin",
     "eleventy",
-    "eleventy-plugin"
+	"eleventy-plugin",
+	"codepen"
   ],
   "author": {
-    "name": "username",
-    "url": "https://website.com"
+    "name": "Kumar Abhishek",
+    "url": "https://abhi.page"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/username/repo-name/issues"
+    "url": "https://github.com/manustays/eleventy-plugin-codepen-iframe/issues"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1"
