@@ -1,5 +1,5 @@
 // Example use for the demo plugin:
-// {{ 'EmbedCodePen' "https://codepen.io/abhiweb/pen/wvzNaQM", "result", "220" }}
+// {% CodePen "https://codepen.io/abhiweb/pen/wvzNaQM", "result", "220" %}
 
 // Define defaults for your plugin config
 const defaults = {
@@ -36,10 +36,10 @@ module.exports = (eleventyConfig, options) => {
 	 * @param {*} height A unitless value of the height in pixels (default: "300")
 	 * @param {*} theme A theme ID (default: "dark")
 	 */
-	eleventyConfig.addShortcode("EmbedCodePen", (url, tabs, height, theme) => {
+	eleventyConfig.addShortcode("CodePen", (url, tabs, height, theme) => {
 
 		const id = new URL(url).pathname.split('/')[3];
 
-		return `<iframe class="${userDefaults.class}" height="${height || userDefaults.height}" style="width:${userDefaults.width};" scrolling="no" title="See the Pen" src="https://codepen.io/anon/embed/${id}?height=${height || userDefaults.height}&theme-id=${theme || userDefaults.theme}&default-tab=${tabs || userDefaults.tabs}" frameborder="0" loading="lazy" allowtransparency="true" allowfullscreen="true"><p><a href="${url}" target="_blank" rel="noopener">See the Pen</a></p></iframe>`
+		return `<iframe class="${userDefaults.class}" height="${height || userDefaults.height}" style="width:${userDefaults.width};" scrolling="no" title="CodePen Embed" src="https://codepen.io/anon/embed/${id}?height=${height || userDefaults.height}&theme-id=${theme || userDefaults.theme}&default-tab=${tabs || userDefaults.tabs}" frameborder="0" loading="lazy" allowtransparency="true" allowfullscreen="true"><p><a href="${url}" target="_blank" rel="noopener">See the Pen</a></p></iframe>`
 	});
 };

@@ -1,6 +1,6 @@
 {
   "name": "@manustays/eleventy-plugin-codepen-iframe",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "Embed CodePen.io Pens into your 11ty website using a ShortCode. It directly embeds an iFrame for efficiency (without loading CodePen's Javascript).",
   "homepage": "",
   "main": ".eleventy.js",

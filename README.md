@@ -1,8 +1,8 @@
 # Eleventy Plugin to Embed CodePen.io Pens (using iFrame)
 
-> Embed CodePen.io Pens into your 11ty website using a ShortCode. It directly embeds an iFrame for efficiency (without loading CodePen's Javascript).
+> Embed CodePen.io Pens into your 11ty website by using a ShortCode. It directly embeds an iFrame for efficiency (without loading CodePen's Javascript).
 
-Yet another [11ty](11ty.dev) plugin to embed CodePens into you pages. The other plugins that I had seen use CodePen's preferred Javascript based embeds. It requires loading an external Javascript (though, a small one) into your page. The Javascript finally embeds an `<iframe>` anyway!
+Yet another [11ty](11ty.dev) plugin to embed CodePens into you pages. The other plugins that I had seen use CodePen's preferred Javascript based embeds. It requires loading an external Javascript (though, a small one) into your page. The Javascript finally creates an `<iframe>` anyway!
 
 I wanted a more efficient solution for my blog by directly embedding the Pen's iFrame; therefore this plugin.
 
@@ -20,15 +20,17 @@ npm install --save-dev @manustays/eleventy-plugin-codepen-iframe
 const embedCodePen = require("@manustays/eleventy-plugin-codepen-iframe");
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addPlugin(embedCodePen);
+	eleventyConfig.addPlugin(embedCodePen, {
+		tabs: "js,result",
+		user: "manustays"
+	});
 };
 ```
-
 
 ### STEP 3 – Use it in your templates:
 
 ```njk
-{% EmbedCodePen "pen-url" %}
+{% CodePen "pen-url" %}
 ```
 
 ## Config Options
